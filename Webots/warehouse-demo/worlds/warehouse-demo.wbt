@@ -1,0 +1,549 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/robots/mir/mir100/protos/Mir100.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/devices/sick/protos/SickS300.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/school_furniture/protos/Clock.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/cabinet/protos/Cabinet.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/appearances/protos/GlossyPaint.proto"
+EXTERNPROTO "../protos/ConveyorBelt.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/appearances/protos/CorrugatedMetal.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/factory/containers/protos/PlasticCrate.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/tables/protos/Table.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/appearances/protos/BrushedAluminium.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/computers/protos/Monitor.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/computers/protos/Keyboard.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/computers/protos/DesktopComputer.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/computers/protos/ComputerMouse.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/factory/tools/protos/Wrench.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/factory/tools/protos/Hammer.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/factory/tools/protos/PlatformCart.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/apartment_structure/protos/Radiator.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/factory/pallet/protos/WoodenPalletStack.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/factory/containers/protos/CardboardBox.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/appearances/protos/ThreadMetalPlate.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/appearances/protos/Roughcast.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/solids/protos/SolidBox.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/appearances/protos/GalvanizedMetal.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/factory/fire_extinguisher/protos/FireExtinguisher.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/robots/universal_robots/protos/UR3e.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/devices/robotiq/protos/Robotiq3fGripper.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/robots/universal_robots/protos/UR5e.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/telephone/protos/OfficeTelephone.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/factory/pallet/protos/WoodenPallet.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/chairs/protos/OfficeChair.proto"
+
+WorldInfo {
+  title "Simulation of Network-aware Planning for Mobile Industrial Robotics' MiR100 robots"
+  contactProperties [
+    ContactProperties {
+      material1 "wheel"
+      softCFM 0.0001
+    }
+    ContactProperties {
+      material1 "slope"
+      coulombFriction [
+        0.5
+      ]
+    }
+  ]
+}
+Viewpoint {
+  orientation -0.06141769477987932 0.9186065678224333 0.39037141329945607 0.39336314621845636
+  position -5.185073205110352 3.0705840423763138 4.403855549488367
+  exposure 1.7
+  followType "None"
+}
+TexturedBackground {
+  texture "factory"
+}
+Robot {
+  translation 9 4 1.9
+  children [
+    PointLight {
+      attenuation 0 0 1
+      color 0 1 1
+      location 0 0 -0.6
+    }
+    Shape {
+      appearance PBRAppearance {
+        baseColorMap ImageTexture {
+          url [
+            "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/lights/protos/textures/light_support_base_color.jpg"
+          ]
+        }
+        roughnessMap ImageTexture {
+          url [
+            "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/lights/protos/textures/light_support_roughness.jpg"
+          ]
+        }
+        metalnessMap ImageTexture {
+          url [
+            "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/lights/protos/textures/light_support_metalness.jpg"
+          ]
+        }
+      }
+      geometry IndexedFaceSet {
+        coord Coordinate {
+          point [
+            -0.0026606 -0.0047659 -0.04, -0.0054577 0 -0.04, -0.0027971 0.0046871 -0.04, 0.0026606 0.0047659 -0.04, 0.0054577 0 -0.04, 0.0027971 -0.0046871 -0.04, 0.0027971 -0.0046871 -0.359013, 0.0054577 0 -0.359013, 0.0026605 0.004766 -0.359013, -0.0027972 0.0046871 -0.359013, -0.0054578 0 -0.359013, -0.0026606 -0.0047659 -0.359013, -0.0097487 -0.0174632 -0.408257, -0.0199978 -0.0002889 -0.408257, -0.0102491 0.0171742 -0.408257, 0.0097488 0.0174631 -0.408257, 0.019998 0.0002889 -0.408257, 0.0102492 -0.0171743 -0.408257, -0.0097488 -0.0174631 -0.367245, -0.019998 -0.0002889 -0.367245, -0.0102492 0.0171743 -0.367245, 0.0097487 0.0174632 -0.367245, 0.0199979 0.000289 -0.367245, 0.0102491 -0.0171742 -0.367245, -0.0340255 -0.0609506 -0.029659, 0.035772 -0.0599422 -0.029659, -0.0697975 -0.0010084 -0.029659, -0.035772 0.0599422 -0.029659, 0.0340255 0.0609506 -0.029659, 0.0697975 0.0010084 -0.029659, 0.035772 -0.0599422 0, -0.0340255 -0.0609506 0, -0.0697975 -0.0010084 0, -0.035772 0.0599422 0, 0.0340255 0.0609506 0, 0.0697975 0.0010084 0
+          ]
+        }
+        texCoord TextureCoordinate {
+          point [
+            0.673576 0.975953, 0.96797 0.975954, 0.967971 0.913412, 0.673576 0.975953, 0.967971 0.913412, 0.673577 0.913411, 0.961686 0.975952, 0.667287 0.975952, 0.667287 0.913409, 0.961686 0.975952, 0.667287 0.913409, 0.961686 0.913409, 0.667287 0.975952, 0.372888 0.975951, 0.372888 0.913409, 0.667287 0.975952, 0.372888 0.913409, 0.667287 0.913409, 0.372888 0.975951, 0.0784924 0.975951, 0.0784918 0.91341, 0.372888 0.975951, 0.0784918 0.91341, 0.372888 0.913409, 0.0784924 0.975951, 0.379182 0.975952, 0.379183 0.91341, 0.0784924 0.975951, 0.379183 0.91341, 0.0784918 0.91341, 0.379182 0.975952, 0.673576 0.975953, 0.673577 0.913411, 0.379182 0.975952, 0.673577 0.913411, 0.379183 0.91341, 0.778147 0.802373, 0.802194 0.796154, 0.955235 0.841027, 0.778147 0.802373, 0.955235 0.841027, 0.77463 0.887955, 0.802194 0.796154, 0.803373 0.782192, 0.963577 0.737402, 0.802194 0.796154, 0.963577 0.737402, 0.955235 0.841027, 0.803373 0.782192, 0.779209 0.775098, 0.782749 0.687154, 0.803373 0.782192, 0.782749 0.687154, 0.963577 0.737402, 0.779209 0.775098, 0.754492 0.781704, 0.598144 0.733733, 0.779209 0.775098, 0.598144 0.733733, 0.782749 0.687154, 0.754492 0.781704, 0.75456 0.795624, 0.598144 0.83732, 0.754492 0.781704, 0.598144 0.83732, 0.598144 0.733733, 0.75456 0.795624, 0.778147 0.802373, 0.77463 0.887955, 0.75456 0.795624, 0.77463 0.887955, 0.598144 0.83732, 0.236395 0.149698, 0.236398 0.291064, 0.0985201 0.291065, 0.236395 0.149698, 0.0985201 0.291065, 0.0985174 0.149699, 0.925784 0.149697, 0.925785 0.291062, 0.787907 0.291062, 0.925784 0.149697, 0.787907 0.291062, 0.787907 0.149696, 0.787907 0.149696, 0.787907 0.291062, 0.65003 0.291062, 0.787907 0.149696, 0.65003 0.291062, 0.650029 0.149696, 0.650029 0.149696, 0.65003 0.291062, 0.512153 0.291062, 0.650029 0.149696, 0.512153 0.291062, 0.512151 0.149697, 0.512151 0.149697, 0.512153 0.291062, 0.374275 0.291063, 0.512151 0.149697, 0.374275 0.291063, 0.374273 0.149698, 0.374273 0.149698, 0.374275 0.291063, 0.236398 0.291064, 0.374273 0.149698, 0.236398 0.291064, 0.236395 0.149698, 0.378192 0.352619, 0.518849 0.313588, 0.517968 0.374302, 0.378192 0.352619, 0.517968 0.374302, 0.483821 0.383711, 0.378193 0.433052, 0.378192 0.352619, 0.483821 0.383711, 0.378193 0.433052, 0.483821 0.383711, 0.483938 0.403205, 0.516091 0.474604, 0.378193 0.433052, 0.483938 0.403205, 0.516091 0.474604, 0.483938 0.403205, 0.517126 0.413355, 0.655475 0.434237, 0.516091 0.474604, 0.517126 0.413355, 0.655475 0.434237, 0.517126 0.413355, 0.549913 0.403165, 0.658429 0.353712, 0.655475 0.434237, 0.549913 0.403165, 0.658429 0.353712, 0.549913 0.403165, 0.551822 0.383886, 0.518849 0.313588, 0.658429 0.353712, 0.551822 0.383886, 0.518849 0.313588, 0.551822 0.383886, 0.517968 0.374302, 0.276996 0.989887, 0.15939 0.993675, 0.15939 0.543235, 0.276996 0.989887, 0.15939 0.543235, 0.276996 0.539447, 0.865024 0.970946, 0.747418 0.974734, 0.747418 0.524294, 0.865024 0.970946, 0.747418 0.524294, 0.865024 0.520505, 0.747418 0.974734, 0.629812 0.978522, 0.629813 0.528082, 0.747418 0.974734, 0.629813 0.528082, 0.747418 0.524294, 0.629812 0.978522, 0.512207 0.98231, 0.512207 0.53187, 0.629812 0.978522, 0.512207 0.53187, 0.629813 0.528082, 0.394601 0.535658, 0.512207 0.53187, 0.512207 0.98231, 0.394601 0.535658, 0.512207 0.98231, 0.394601 0.986098, 0.276996 0.539447, 0.394601 0.535658, 0.394601 0.986098, 0.276996 0.539447, 0.394601 0.986098, 0.276996 0.989887, 0.863006 0.721681, 0.56134 0.634597, 0.661895 0.721681, 0.963562 0.634597, 0.56134 0.634597, 0.863006 0.721681, 0.963562 0.634597, 0.661896 0.547514, 0.56134 0.634597, 0.863007 0.547514, 0.661896 0.547514, 0.963562 0.634597, 0.619729 0.35533, 0.350378 0.35533, 0.215703 0.238698, 0.754404 0.238697, 0.619729 0.35533, 0.215703 0.238698, 0.754404 0.238697, 0.215703 0.238698, 0.350378 0.122065, 0.619728 0.122065, 0.754404 0.238697, 0.350378 0.122065
+          ]
+        }
+        coordIndex [
+          25, 29, 35, -1, 25, 35, 30, -1, 29, 28, 34, -1, 29, 34, 35, -1, 28, 27, 33, -1, 28, 33, 34, -1, 27, 26, 32, -1, 27, 32, 33, -1, 26, 24, 31, -1, 26, 31, 32, -1, 24, 25, 30, -1, 24, 30, 31, -1, 5, 4, 29, -1, 5, 29, 25, -1, 4, 3, 28, -1, 4, 28, 29, -1, 3, 2, 27, -1, 3, 27, 28, -1, 2, 1, 26, -1, 2, 26, 27, -1, 1, 0, 24, -1, 1, 24, 26, -1, 0, 5, 25, -1, 0, 25, 24, -1, 23, 17, 16, -1, 23, 16, 22, -1, 22, 16, 15, -1, 22, 15, 21, -1, 21, 15, 14, -1, 21, 14, 20, -1, 20, 14, 13, -1, 20, 13, 19, -1, 19, 13, 12, -1, 19, 12, 18, -1, 18, 12, 17, -1, 18, 17, 23, -1, 18, 23, 6, -1, 18, 6, 11, -1, 19, 18, 11, -1, 19, 11, 10, -1, 20, 19, 10, -1, 20, 10, 9, -1, 21, 20, 9, -1, 21, 9, 8, -1, 22, 21, 8, -1, 22, 8, 7, -1, 23, 22, 7, -1, 23, 7, 6, -1, 6, 7, 4, -1, 6, 4, 5, -1, 7, 8, 3, -1, 7, 3, 4, -1, 8, 9, 2, -1, 8, 2, 3, -1, 9, 10, 1, -1, 9, 1, 2, -1, 0, 1, 10, -1, 0, 10, 11, -1, 5, 0, 11, -1, 5, 11, 6, -1, 30, 32, 31, -1, 35, 32, 30, -1, 35, 33, 32, -1, 34, 33, 35, -1, 17, 12, 13, -1, 16, 17, 13, -1, 16, 13, 14, -1, 15, 16, 14, -1
+        ]
+        texCoordIndex [
+          0, 1, 2, -1, 3, 4, 5, -1, 6, 7, 8, -1, 9, 10, 11, -1, 12, 13, 14, -1, 15, 16, 17, -1, 18, 19, 20, -1, 21, 22, 23, -1, 24, 25, 26, -1, 27, 28, 29, -1, 30, 31, 32, -1, 33, 34, 35, -1, 36, 37, 38, -1, 39, 40, 41, -1, 42, 43, 44, -1, 45, 46, 47, -1, 48, 49, 50, -1, 51, 52, 53, -1, 54, 55, 56, -1, 57, 58, 59, -1, 60, 61, 62, -1, 63, 64, 65, -1, 66, 67, 68, -1, 69, 70, 71, -1, 72, 73, 74, -1, 75, 76, 77, -1, 78, 79, 80, -1, 81, 82, 83, -1, 84, 85, 86, -1, 87, 88, 89, -1, 90, 91, 92, -1, 93, 94, 95, -1, 96, 97, 98, -1, 99, 100, 101, -1, 102, 103, 104, -1, 105, 106, 107, -1, 108, 109, 110, -1, 111, 112, 113, -1, 114, 115, 116, -1, 117, 118, 119, -1, 120, 121, 122, -1, 123, 124, 125, -1, 126, 127, 128, -1, 129, 130, 131, -1, 132, 133, 134, -1, 135, 136, 137, -1, 138, 139, 140, -1, 141, 142, 143, -1, 144, 145, 146, -1, 147, 148, 149, -1, 150, 151, 152, -1, 153, 154, 155, -1, 156, 157, 158, -1, 159, 160, 161, -1, 162, 163, 164, -1, 165, 166, 167, -1, 168, 169, 170, -1, 171, 172, 173, -1, 174, 175, 176, -1, 177, 178, 179, -1, 180, 181, 182, -1, 183, 184, 185, -1, 186, 187, 188, -1, 189, 190, 191, -1, 192, 193, 194, -1, 195, 196, 197, -1, 198, 199, 200, -1, 201, 202, 203, -1
+        ]
+      }
+    }
+    Transform {
+      translation 0 0 -0.55
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0 1 1
+            baseColorMap ImageTexture {
+              url [
+                "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/lights/protos/textures/light_bulb.jpg"
+              ]
+            }
+            roughness 1
+            metalness 0
+            emissiveColor 0 1 1
+          }
+          geometry Sphere {
+            radius 0.15
+            subdivision 4
+          }
+        }
+      ]
+    }
+  ]
+  name "Radio"
+  controller "network_supervisor"
+  controllerArgs [
+    "BASE"
+  ]
+}
+DEF ROBOT1 Mir100 {
+  hidden rotation_13 -1 -2.6698902196953195e-11 -2.669901259387644e-11 1.5707999999999944
+  hidden rotation_15 -1 -3.3638362711381425e-11 -3.363848552795854e-11 1.5707999999999942
+  translation 1 10 0
+  name "Robot1"
+  controller "robot_motion_control"
+  controllerArgs [
+    "ROBOT1"
+  ]
+  supervisor TRUE
+  color 0 1 1
+  frontLidarSlot [
+    SickS300 {
+      name "front_lidar"
+    }
+  ]
+  backLidarSlot [
+    SickS300 {
+      name "back_lidar"
+    }
+  ]
+}
+DEF ROBOT2 Mir100 {
+  translation 1 8 0
+  name "Robot2"
+  controller "robot_motion_control"
+  controllerArgs [
+    "ROBOT2"
+  ]
+  supervisor TRUE
+  color 1 0.666667 0
+  frontLidarSlot [
+    SickS300 {
+      name "front_lidar"
+    }
+  ]
+  backLidarSlot [
+    SickS300 {
+      name "back_lidar"
+    }
+  ]
+}
+DEF ROBOT3 Mir100 {
+  translation 9 10 0
+  rotation 0 0 1 -1.5707953071795862
+  name "Robot3"
+  controller "robot_motion_control"
+  controllerArgs [
+    "ROBOT3"
+  ]
+  supervisor TRUE
+  color 0 1 0
+  frontLidarSlot [
+    SickS300 {
+      name "front_lidar"
+    }
+  ]
+  backLidarSlot [
+    SickS300 {
+      name "back_lidar"
+    }
+  ]
+}
+DEF ROBOT4 Mir100 {
+  translation 7 6 0
+  rotation 0 0 1 -1.5707953071795862
+  name "Robot4"
+  controller "robot_motion_control"
+  controllerArgs [
+    "ROBOT4"
+  ]
+  supervisor TRUE
+  color 1 0 1
+  frontLidarSlot [
+    SickS300 {
+      name "front_lidar"
+    }
+  ]
+  backLidarSlot [
+    SickS300 {
+      name "back_lidar"
+    }
+  ]
+}
+Clock {
+  translation 0.0299655 6.421 1.8
+  rotation 0 0 -1 -5.307179586466759e-06
+}
+Cabinet {
+  translation 3.23309 10.9877 -7.01661e-14
+  rotation 0 0 1 -1.5707953071795862
+  name "cabinet(7)"
+  rowsHeights [
+    0.24, 0.2, 0.2
+  ]
+  columnsWidths [
+    0.8, 0.4, 0.4
+  ]
+  layout [
+    "RightSidedDoor (1, 1,  1, 3, 1.5)"
+    "LeftSidedDoor (2, 1, 2, 3, 1.5)"
+  ]
+  primaryAppearance GlossyPaint {
+    baseColor 0.729 0.741 0.713
+  }
+  secondaryAppearance GlossyPaint {
+    baseColor 0.1 0.3 0.8
+  }
+}
+Cabinet {
+  translation 11.96 8.15 0
+  rotation 0 0 1 3.14159
+  name "cabinet(2)"
+  depth 0.7
+  columnsWidths [
+    0.5, 0.25, 0.25
+  ]
+  layout [
+    "RightSidedDoor (1, 1, 1, 5, 1.5)"
+    "LeftSidedDoor (2, 1, 2, 5, 1.5)"
+  ]
+  primaryAppearance GlossyPaint {
+    baseColor 0.729 0.741 0.713
+  }
+  secondaryAppearance GlossyPaint {
+    baseColor 0.1 0.3 0.8
+  }
+}
+Cabinet {
+  translation 11.96 10.27 0
+  rotation 0 0 1 3.14159
+  name "cabinet(3)"
+  depth 0.7
+  columnsWidths [
+    0.5, 0.25, 0.25
+  ]
+  layout [
+    "RightSidedDoor (1, 1, 1, 5, 1.5)"
+    "LeftSidedDoor (2, 1, 2, 5, 1.5)"
+  ]
+  primaryAppearance GlossyPaint {
+    baseColor 0.729 0.741 0.713
+  }
+  secondaryAppearance GlossyPaint {
+    baseColor 0.1 0.3 0.8
+  }
+}
+Cabinet {
+  translation 11.96 9.21 0
+  rotation 0 0 1 3.14159
+  name "cabinet(4)"
+  depth 0.7
+  columnsWidths [
+    0.5, 0.25, 0.25
+  ]
+  layout [
+    "RightSidedDoor (1, 1, 1, 5, 1.5)"
+    "LeftSidedDoor (2, 1, 2, 5, 1.5)"
+  ]
+  primaryAppearance GlossyPaint {
+    baseColor 0.729 0.741 0.713
+  }
+  secondaryAppearance GlossyPaint {
+    baseColor 0.1 0.3 0.8
+  }
+}
+Table {
+  translation 0.459994 5.98 0
+  rotation 0 0 1 -1.5707953071795862
+  size 1.8 0.8 0.7
+  feetSize 0.05 0.05
+  trayAppearance PBRAppearance {
+    baseColor 0.926 0.912 0.698
+    roughness 0.8
+    metalness 0
+  }
+  legAppearance BrushedAluminium {
+    colorOverride 0.333 0.341 0.325
+  }
+}
+Monitor {
+  translation 0.291896 5.69313 0.7
+  rotation -0.008717382395318482 -0.0023358206418250455 -0.9999592747637792 -5.307179586466759e-06
+}
+Keyboard {
+  translation 0.601204 5.57021 0.7
+  rotation 0 0 1 -2.8797953071795863
+}
+DesktopComputer {
+  translation 0.47103 5.25509 0
+  rotation 0 0 1 1.0150305250839343e-06
+}
+ComputerMouse {
+  translation 0.59234 5.9477 0.7
+  rotation 0 0 1 3.14159
+  mass 0
+}
+Table {
+  translation 11.5301 6.08667 0
+  rotation 0 0 1 -1.5707953071795862
+  name "table(1)"
+  size 1.8 0.8 0.7
+  feetSize 0.05 0.05
+  trayAppearance PBRAppearance {
+    baseColor 0.926 0.912 0.698
+    roughness 0.8
+    metalness 0
+  }
+  legAppearance BrushedAluminium {
+    colorOverride 0.333 0.341 0.325
+  }
+}
+Wrench {
+  translation 11.5165 6.00123 0.709999
+  rotation 0.25881895959346185 -0.9659258492006931 0 3.14159
+}
+Hammer {
+  translation 11.6862 5.63071 0.71
+  rotation 0 0 1 1.5708
+}
+PlatformCart {
+  translation 9.92221 6.39815 0
+  rotation 0 0 1 -2.8797953071795863
+}
+Radiator {
+  translation 0.128902 4.04131 0.33
+  rotation 0 0 1 1.01503e-06
+  numberOfFins 16
+}
+WoodenPalletStack {
+  translation 5.0008 10.3539 0
+  rotation 0 0 1 -0.261795307179586
+  palletNumber 9
+  palletSize 1 0.8 0.11
+}
+Cabinet {
+  translation 0.0100043 3.43 0
+  rotation 0 0 1 1.01503e-06
+  name "cabinet(1)"
+  layout [
+    "RightSidedDoor (1, 1, 1, 5, 1.5)"
+    "LeftSidedDoor (2, 1, 2, 5, 1.5)"
+  ]
+  primaryAppearance GlossyPaint {
+    baseColor 0.729 0.741 0.713
+  }
+  secondaryAppearance GlossyPaint {
+    baseColor 0.1 0.3 0.8
+  }
+}
+CardboardBox {
+  translation 10.45 5.54 0.3
+  rotation 0.793352938414779 0.6087619527439333 1.6981998681746684e-07 3.14159
+}
+CardboardBox {
+  translation 9.8659 6.3659 0.25
+  rotation 0 0 -1 -0.261795307179586
+  name "cardboard box(1)"
+  size 0.4 0.4 0.3
+}
+RectangleArena {
+  translation 6 6 0
+  rotation 0 1 0 0
+  floorSize 12 10
+  floorAppearance ThreadMetalPlate {
+  }
+  wallThickness 0.3
+  wallHeight 1
+  wallAppearance Roughcast {
+    textureTransform TextureTransform {
+      scale 2 1
+    }
+  }
+}
+WoodenPallet {
+  translation 6.88 10.89 0.4
+  rotation -1 0 0 -1.3090153071795863
+}
+WoodenPallet {
+  translation 6.84 10.7412 0.387937
+  rotation 2.918978913461384e-09 -0.6087687733965198 0.7933477046902556 3.14159
+  name "wooden pallet(1)"
+}
+OfficeTelephone {
+  translation 11.6888 6.55777 0.7
+  rotation 0 0 1 -2.3561953071795863
+}
+SolidBox {
+  translation 3.895 1.9777 0.305
+  rotation 1 0 0 1.5707963267948966
+  size 0.5 0.61 0.4
+  appearance GalvanizedMetal {
+  }
+}
+SolidBox {
+  translation 4.545 1.9777 0.45
+  rotation 1 0 0 1.5707963267948966
+  name "box(5)"
+  size 0.8 0.91 0.4
+  appearance GalvanizedMetal {
+  }
+}
+FireExtinguisher {
+  translation 7.85229 10.74 0
+  rotation 0 0 1 -1.5707953071795862
+}
+UR3e {
+  translation 4.28296 1.95939 0.91
+  rotation 1 0 0 0
+  controller "<none>"
+  controllerArgs [
+    "3"
+  ]
+  selfCollision FALSE
+  toolSlot [
+    Robotiq3fGripper {
+    }
+    DistanceSensor {
+      translation 0 0.1 0
+      rotation 0 0 1 1.570796
+    }
+  ]
+}
+UR5e {
+  translation 3.81 2.03 0.61
+  rotation 5.9116741e-08 0 -0.999999999999998 1.570796267678159
+  controller "<none>"
+  selfCollision FALSE
+  toolSlot [
+    Robotiq3fGripper {
+    }
+    DistanceSensor {
+      translation 0 0.1 0
+      rotation 0 0 1 1.570796
+    }
+  ]
+}
+ConveyorBelt {
+  translation 6 1.24 0
+  rotation 0 0 1 3.14159
+  size 4 0.4 0.6
+  appearance CorrugatedMetal {
+    textureTransform TextureTransform {
+      scale 6 3.1
+    }
+  }
+  borderHeight 0
+  speed 0.2
+}
+ConveyorBelt {
+  translation 6 2.53 0
+  name "conveyor belt(1)"
+  size 4 0.5 0.25
+  appearance CorrugatedMetal {
+    textureTransform TextureTransform {
+      scale 6 3.1
+    }
+  }
+  borderHeight 0
+  speed 0
+  timer 90
+}
+PlasticCrate {
+  translation 7.34 2.54 0.25
+  size 0.6 0.45 0.4
+  color 0 0 0.6
+  mass 1
+}
+PlasticCrate {
+  translation 6.73 2.54 0.25
+  name "plastic crate(1)"
+  size 0.6 0.45 0.4
+  color 0 0 0.6
+  mass 1
+}
+PlasticCrate {
+  translation 6.12 2.54 0.25
+  name "plastic crate(2)"
+  size 0.6 0.45 0.4
+  color 0 0 0.6
+  mass 1
+}
+PlasticCrate {
+  translation 4.93 2.54 0.25
+  name "plastic crate(3)"
+  size 0.6 0.45 0.4
+  color 0 0 0.6
+  mass 1
+}
+PlasticCrate {
+  translation 1 10 0.36
+  rotation 0 1 0 0
+  name "Crate1"
+  size 0.4 0.25 0.25
+  mass 1
+}
+PlasticCrate {
+  translation 1 8 0.36
+  rotation 0 1 0 0
+  name "Crate1(1)"
+  size 0.4 0.25 0.25
+  color 0.666667 0.333333 0
+  mass 1
+}
+PlasticCrate {
+  translation 4.32 2.54 0.25
+  name "plastic crate(4)"
+  size 0.6 0.45 0.4
+  color 0 0 0.6
+  mass 1
+}
+OfficeChair {
+  translation 1.24938 5.96215 0
+  rotation 0 0 1 -2.8797953071795863
+}
